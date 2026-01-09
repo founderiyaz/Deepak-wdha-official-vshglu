@@ -50,22 +50,22 @@ src="https://www.facebook.com/tr?id=1132229438824278&ev=PageView&noscript=1"/>
 
   /* IMPORTANT: Button must stay in DOM */
   .btn-telegram {
-    display: flex;                 /* Meta ke liye visible */
-    opacity: 0;                    /* User ke liye initially hidden */
-    pointer-events: none;          /* No accidental clicks */
-    transform: translateY(12px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+  display: flex;
+  opacity: 0.01;               /* IMPORTANT: not 0 */
+  transform: translateY(12px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 14px;
-    border-radius: 14px;
-    font-weight: 700;
-    color: #ffffff;
-    background: linear-gradient(90deg, #0284c7, #38bdf8);
-    width: 100%;
-  }
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(90deg, #0284c7, #38bdf8);
+  width: 100%;
+}
+
 </style>
 
 </head>
@@ -137,11 +137,12 @@ src="https://www.facebook.com/tr?id=1132229438824278&ev=PageView&noscript=1"/>
     const btn = document.getElementById("tgBtn");
     if (btn) {
       btn.style.opacity = "1";
-      btn.style.pointerEvents = "auto";
       btn.style.transform = "translateY(0)";
     }
   }, 3000);
 </script>
 
+
 </body>
 </html>
+
