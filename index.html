@@ -23,61 +23,38 @@ src="https://www.facebook.com/tr?id=1132229438824278&ev=PageView&noscript=1"/>
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Join Telegram Channel</title>
+<title>Join Telegram Community</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #eef2ff, #fdf2f8);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-  }
-
-  .card {
-    background: #ffffff;
-    border-radius: 20px;
-    max-width: 420px;
-    width: 100%;
-    padding: 24px 20px;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
-    text-align: center;
-  }
-
-  .cta-btn {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: linear-gradient(135deg, #0088cc, #00bcd4);
-    color: #fff;
-    padding: 14px;
-    border-radius: 14px;
-    font-weight: 800;
-    font-size: 1.05rem;
-    box-shadow: 0 10px 30px rgba(0,136,204,0.4);
-  }
-
-  .badge {
-    display: inline-block;
-    background: #fee2e2;
-    color: #b91c1c;
-    font-weight: 700;
-    padding: 6px 14px;
-    border-radius: 999px;
-    font-size: 0.85rem;
-  }
-
-  .feature {
-    display: flex;
-    gap: 8px;
-    font-size: 0.95rem;
-    color: #374151;
-  }
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#eef2ff,#fdf2f8);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:1rem;
+}
+.card{
+  background:#ffffff;
+  border-radius:20px;
+  max-width:420px;
+  width:100%;
+  padding:2rem;
+  box-shadow:0 20px 50px rgba(0,0,0,0.12);
+  text-align:center;
+}
+.btn{
+  display:none;
+  margin-top:1.2rem;
+  background:#2563eb;
+  color:#fff;
+  padding:14px;
+  border-radius:14px;
+  font-weight:600;
+}
 </style>
 
 </head>
@@ -86,74 +63,56 @@ src="https://www.facebook.com/tr?id=1132229438824278&ev=PageView&noscript=1"/>
 <div class="card">
 
   <!-- PROFILE -->
-  <img
-    src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/08/deepak-photo.jpeg"
-    class="w-28 h-28 rounded-full mx-auto mb-4 border-4 border-white shadow-md"
-    alt="Profile"
-  />
+  <img src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/08/deepak-photo.jpeg"
+       class="w-28 h-28 rounded-full mx-auto mb-4 border-4 border-gray-200"
+       alt="Profile"/>
 
   <!-- NAME -->
-  <h1 class="text-xl font-extrabold text-gray-900">
-    Deepak Wadwa Official 💸🏆
+  <h1 class="text-xl font-bold text-gray-800 mb-1">
+    Deepak Wadwa
   </h1>
 
-  <p class="text-red-600 font-semibold mt-1 mb-3">
-    📊 7 Years Trading Experience
+  <p class="text-sm text-gray-600 mb-4">
+    Trading Experience: 7+ Years
   </p>
 
-  <!-- QUALIFIER -->
-  <p class="text-sm text-gray-700 font-semibold mb-4">
-    ⚠️ This channel is only for <span class="text-red-600">serious traders</span><br>
-    Click only if you will actually <b>JOIN</b>
+  <!-- POSITIONING (SAFE) -->
+  <p class="text-gray-700 text-sm mb-4">
+    Join a Telegram community focused on  
+    <b>market discussions, trade analysis, and learning.</b>
   </p>
 
-  <!-- BADGE -->
-  <div class="mb-4">
-    <span class="badge">💎 DAILY PROFIT GUARANTEE</span>
-  </div>
-
-  <!-- CTA INFO -->
-  <p class="text-sm text-gray-600 mb-3">
-    ⏳ You will be redirected to Telegram.<br>
-    Please join the channel after opening.
+  <!-- INTENT FILTER -->
+  <p class="text-xs text-gray-500 mb-4">
+    ⚠️ This community is for educational & informational purposes only.<br>
+    No guarantees or financial promises are made.
   </p>
 
-  <!-- CTA BUTTON -->
-  <a
-    id="tgBtn"
-    href="https://t.me/+Ym6xAks_zFxiNGNl"
-    target="_blank"
-    class="cta-btn mb-6"
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-      <path d="M16 8a8 8 0 1 1-16 0 8 8 0 0 1 16 0zM6.79 10.89l-.27 3.67c.39 0 .56-.17.77-.38l1.85-1.76 3.84 2.8c.7.39 1.19.19 1.36-.65l2.47-11.59c.22-.98-.35-1.37-1.05-1.14L1.13 6.24c-.95.37-.93.9-.17 1.14l3.57 1.11 8.3-5.23c.39-.26.74-.12.45.14L6.79 10.89z"/>
-    </svg>
-    JOIN TELEGRAM CHANNEL
+  <!-- CTA TEXT -->
+  <p class="text-sm text-gray-700 mb-2">
+    You will be redirected to Telegram.
+  </p>
+
+  <!-- BUTTON -->
+  <a id="joinBtn"
+     href="https://t.me/+Ym6xAks_zFxiNGNl"
+     target="_blank"
+     class="btn">
+     Join Telegram Community
   </a>
 
-  <!-- FEATURES -->
-  <div class="space-y-3 text-left mb-6">
-    <div class="feature">📊 <b>Live Daily Trades</b></div>
-    <div class="feature">🔥 <b>Exclusive Signals</b></div>
-    <div class="feature">💯 <b>High Accuracy Strategy</b></div>
-    <div class="feature">⚡ <b>Real-Time Market Updates</b></div>
-  </div>
-
-  <!-- HINDI -->
-  <h2 class="text-lg font-bold text-gray-900 mb-1">
-    क्या आप ट्रेडिंग से पैसे कमाना चाहते हैं?
-  </h2>
-  <p class="text-red-600 font-semibold">
-    अगर हां, तो ऊपर दिए गए Telegram बटन पर क्लिक करें
+  <!-- FOOTER SAFE COPY -->
+  <p class="text-[11px] text-gray-400 mt-6 leading-snug">
+    This page does not provide investment advice.<br>
+    Participation is voluntary and for learning purposes only.
   </p>
 
 </div>
 
-<!-- CTA DELAY SCRIPT -->
 <script>
-  setTimeout(() => {
-    document.getElementById("tgBtn").style.display = "flex";
-  }, 3000);
+setTimeout(()=>{
+  document.getElementById("joinBtn").style.display="block";
+},3000);
 </script>
 
 </body>
