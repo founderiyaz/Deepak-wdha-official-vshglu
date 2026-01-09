@@ -49,6 +49,11 @@ src="https://www.facebook.com/tr?id=1132229438824278&ev=PageView&noscript=1"/>
   }
 
   .btn-telegram {
+     display: flex;              /* META ke liye visible */
+  opacity: 0;                 /* user ke liye invisible */
+  pointer-events: none;       /* accidental click block */
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
     align-items: center;
     justify-content: center;
     gap: 8px;
@@ -59,14 +64,6 @@ src="https://www.facebook.com/tr?id=1132229438824278&ev=PageView&noscript=1"/>
     background: linear-gradient(90deg, #0284c7, #38bdf8);
     width: 100%;
   }
-
-  .btn-telegram {
-  display: flex;              /* META ke liye visible */
-  opacity: 0;                 /* user ke liye invisible */
-  pointer-events: none;       /* accidental click block */
-  transform: translateY(10px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
 
 </style>
 
@@ -146,6 +143,7 @@ src="https://www.facebook.com/tr?id=1132229438824278&ev=PageView&noscript=1"/>
 
 </body>
 </html>
+
 
 
 
