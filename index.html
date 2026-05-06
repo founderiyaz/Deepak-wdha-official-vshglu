@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -19,129 +18,200 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1670355800965313&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Join Telegram Community</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telegram Landing</title>
 
 <style>
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f1f5f9, #e0f2fe);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-  }
-
-  .card {
-    background: rgba(255,255,255,0.95);
-    border-radius: 20px;
-    padding: 2rem;
-    max-width: 420px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-  }
-
-  /* IMPORTANT: Button must stay in DOM */
-  .btn-telegram {
-  display: flex;
-  opacity: 0.01;               /* IMPORTANT: not 0 */
-  transform: translateY(12px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 14px;
-  border-radius: 14px;
-  font-weight: 700;
+body {
+  margin: 0;
+  background: #000;
+  font-family: Arial, sans-serif;
   color: white;
-  background: linear-gradient(90deg, #0284c7, #38bdf8);
-  width: 100%;
+  text-align: center;
 }
 
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Profile */
+.profile img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Heading */
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Subtext */
+.subtext {
+  color: #ccc;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #1d8fd7;
+  color: white;
+  padding: 16px 30px;
+  border-radius: 5px;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+}
+
+.btn img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 25px;
+  color: #bbb;
+  font-size: 16px;
+}
+
+.agency {
+  margin-top: 10px;
+}
+
+.agency span {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+/* Timer */
+.timer {
+  margin-top: 20px;
+  font-size: 24px;
+  color: red;
+  font-weight: bold;
+}
+
+.timer-label {
+  font-size: 12px;
+  color: #aaa;
+  letter-spacing: 2px;
+}
+
+/* Redirect text */
+.redirect-text {
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 14px;
+}
 </style>
 
 </head>
+
 <body>
 
-<div class="card">
+<div class="container">
 
-  <!-- PROFILE -->
-  <img
-    src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/07/badshah-ff.jpg"
-    class="w-28 h-28 rounded-full mx-auto mb-4 border-4 border-white shadow-md"
-    alt="Profile"
-  />
-
-  <!-- NAME -->
-  <h1 class="text-xl font-extrabold text-gray-800 mb-1">
-         BADSHAH BROKING OFFICIAL 💸🏆
-  </h1>
-
-  <p class="text-sm text-gray-600 mb-4">
-    Market Education & Community Discussions
-  </p>
-
-  <!-- EXPERIENCE (SAFE WORDING) -->
-  <p class="text-blue-600 font-semibold mb-6">
-    📊 10+ Years of Market Experience 📊
-  </p>
-
-  <!-- INTENT FILTER -->
-  <p class="text-sm text-gray-700 mb-4">
-    This community is for people interested in<br>
-    <b>learning & understanding market behavior.</b><br>
-    Please join only if you are genuinely interested.
-  </p>
-
-  <!-- CTA INFO -->
-  <p class="text-xs text-gray-500 mb-3">
-    You will be redirected to Telegram to join a free community.
-  </p>
-
-  <!-- CTA BUTTON -->
-  <a
-    id="tgBtn"
-    href="https://t.me/+_ITVR4jmIBRiNjll"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="btn-telegram mb-6"
-  >
-    JOIN FREE TELEGRAM COMMUNITY
-  </a>
-
-  <!-- CONTENT -->
-  <div class="text-left text-sm space-y-2 text-gray-700 mb-6">
-    <p>• Daily market observations</p>
-    <p>• Educational discussions</p>
-    <p>• Experience-based viewpoints</p>
-    <p>• Community interaction</p>
+  <!-- Profile -->
+  <div class="profile">
+    <img src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2025/07/badshah-ff.jpg">
   </div>
 
-  <!-- DISCLAIMER -->
-  <p class="text-xs text-gray-400">
-    This community is for educational purposes only.
-  </p>
+  <!-- Heading -->
+  <h1>Join Our Exclusive Telegram Group</h1>
+
+  <!-- Subtext -->
+  <div class="subtext">
+    India's best Channel for #Nifty #Banknifty and #stocks call 🚀
+  </div>
+
+  <!-- Button -->
+  <a href="https://t.me/+_ITVR4jmIBRiNjll" class="btn">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+    Join now on Telegram
+  </a>
+
+  <!-- Footer -->
+  <div class="footer">
+    No spam. Just real updates & exclusive access.
+  </div>
+
+  <!-- Agency -->
+  <div class="agency">
+    This Channel Advertise By <span>APEagency</span>
+  </div>
+
+  <!-- Countdown Timer -->
+  <div class="timer" id="countdown">
+    00 : 00 : 00 : 00
+  </div>
+
+  <div class="timer-label">
+    DAYS &nbsp;&nbsp; HOURS &nbsp;&nbsp; MINUTES &nbsp;&nbsp; SECONDS
+  </div>
+
+  <!-- Redirect message -->
+  <div class="redirect-text" id="redirectMsg">
+    Redirecting in 10 seconds...
+  </div>
 
 </div>
 
+<!-- JS -->
 <script>
-  setTimeout(() => {
-    const btn = document.getElementById("tgBtn");
-    if (btn) {
-      btn.style.opacity = "1";
-      btn.style.transform = "translateY(0)";
-    }
-  }, 2500);
-</script>
 
+// ⏳ MAIN TIMER (1 hour example)
+let countdownDate = new Date().getTime() + (60 * 60 * 1000);
+
+setInterval(function() {
+
+  let now = new Date().getTime();
+  let distance = countdownDate - now;
+
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerHTML =
+    String(days).padStart(2, '0') + " : " +
+    String(hours).padStart(2, '0') + " : " +
+    String(minutes).padStart(2, '0') + " : " +
+    String(seconds).padStart(2, '0');
+
+}, 1000);
+
+
+// 🚀 AUTO REDIRECT (10 sec)
+let sec = 10;
+let msg = document.getElementById("redirectMsg");
+
+let redirectTimer = setInterval(() => {
+  sec--;
+  msg.innerHTML = "Redirecting in " + sec + " seconds...";
+
+  if (sec <= 0) {
+    clearInterval(redirectTimer);
+    window.location.href = "https://t.me/+_ITVR4jmIBRiNjll";
+  }
+}, 1000);
+
+</script>
 
 </body>
 </html>
-
-
