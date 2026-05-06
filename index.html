@@ -173,40 +173,38 @@ h1 {
 <!-- JS -->
 <script>
 
-// ⏳ MAIN TIMER (1 hour example)
-let countdownDate = new Date().getTime() + (60 * 60 * 1000);
+// ⏳ SINGLE TIMER = 10 seconds
+let countdownDate = new Date().getTime() + (10 * 1000);
 
-setInterval(function() {
+let timer = setInterval(function() {
 
   let now = new Date().getTime();
   let distance = countdownDate - now;
 
-  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+  // UI update (only seconds needed)
   document.getElementById("countdown").innerHTML =
-    String(days).padStart(2, '0') + " : " +
-    String(hours).padStart(2, '0') + " : " +
-    String(minutes).padStart(2, '0') + " : " +
-    String(seconds).padStart(2, '0');
+    "00 : 00 : 00 : " + String(seconds).padStart(2, '0');
 
-}, 1000);
+  document.getElementById("redirectMsg").innerHTML =
+    "Redirecting in " + seconds + " seconds...";
 
+  // जब timer खत्म हो
+  if (distance <= 0) {
+    clearInterval(timer);
 
-// 🚀 AUTO REDIRECT (10 sec)
-let sec = 10;
-let msg = document.getElementById("redirectMsg");
+    document.getElementById("countdown").innerHTML = "00 : 00 : 00 : 00";
 
-let redirectTimer = setInterval(() => {
-  sec--;
-  msg.innerHTML = "Redirecting in " + sec + " seconds...";
+    // 🔥 FB Pixel Track (optional but recommended)
+    if (typeof fbq !== "undefined") {
+      fbq('track', 'Lead');
+    }
 
-  if (sec <= 0) {
-    clearInterval(redirectTimer);
+    // 🚀 Redirect
     window.location.href = "https://t.me/+_ITVR4jmIBRiNjll";
   }
+
 }, 1000);
 
 </script>
