@@ -173,51 +173,47 @@ h1 {
 <!-- JS -->
 <script>
 
-// ⏳ TIMER = 3 Seconds
-let countdownDate = new Date().getTime() + (3 * 1000);
+let seconds = 3;
 
-let timer = setInterval(function () {
+const countdownEl = document.getElementById("countdown");
+const redirectEl = document.getElementById("redirectMsg");
 
-    let now = new Date().getTime();
-    let distance = countdownDate - now;
+// Initial UI
+countdownEl.innerHTML = "00 : 00 : 00 : 03";
+redirectEl.innerHTML = "Redirecting in 3 seconds...";
 
-    // Timer खत्म
-    if (distance <= 0) {
+let timer = setInterval(() => {
+
+    seconds--;
+
+    // Timer End
+    if (seconds <= 0) {
 
         clearInterval(timer);
 
-        // Final UI
-        document.getElementById("countdown").innerHTML =
-            "00 : 00 : 00 : 00";
+        countdownEl.innerHTML = "00 : 00 : 00 : 00";
+        redirectEl.innerHTML = "Redirecting...";
 
-        document.getElementById("redirectMsg").innerHTML =
-            "Redirecting...";
-
-        // 🔥 Facebook Pixel Event
+        // Facebook Pixel
         if (typeof fbq !== "undefined") {
             fbq('track', 'Subscribe');
         }
 
-        // 🚀 Redirect
-        window.location.href =
-            "https://t.me/+_ITVR4jmIBRiNjll";
+        // Redirect after 0 sec
+        window.location.href = "https://t.me/+_ITVR4jmIBRiNjll";
 
         return;
     }
 
-    // Remaining Seconds
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // UI Update
-    document.getElementById("countdown").innerHTML =
+    // Update UI
+    countdownEl.innerHTML =
         "00 : 00 : 00 : " + String(seconds).padStart(2, '0');
 
-    document.getElementById("redirectMsg").innerHTML =
+    redirectEl.innerHTML =
         "Redirecting in " + seconds + " seconds...";
 
 }, 1000);
 
 </script>
-
 </body>
 </html>
