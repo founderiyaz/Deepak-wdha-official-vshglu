@@ -173,37 +173,47 @@ h1 {
 <!-- JS -->
 <script>
 
-// ⏳ SINGLE TIMER = 10 seconds
-let countdownDate = new Date().getTime() + (1 * 1000);
+// ⏳ TIMER = 3 Seconds
+let countdownDate = new Date().getTime() + (3 * 1000);
 
-let timer = setInterval(function() {
+let timer = setInterval(function () {
 
-  let now = new Date().getTime();
-  let distance = countdownDate - now;
+    let now = new Date().getTime();
+    let distance = countdownDate - now;
 
-  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Timer खत्म
+    if (distance <= 0) {
 
-  // UI update (only seconds needed)
-  document.getElementById("countdown").innerHTML =
-    "00 : 00 : 00 : " + String(seconds).padStart(2, '0');
+        clearInterval(timer);
 
-  document.getElementById("redirectMsg").innerHTML =
-    "Redirecting in " + seconds + " seconds...";
+        // Final UI
+        document.getElementById("countdown").innerHTML =
+            "00 : 00 : 00 : 00";
 
-  // जब timer खत्म हो
-  if (distance <= 0) {
-    clearInterval(timer);
+        document.getElementById("redirectMsg").innerHTML =
+            "Redirecting...";
 
-    document.getElementById("countdown").innerHTML = "00 : 00 : 00 : 00";
+        // 🔥 Facebook Pixel Event
+        if (typeof fbq !== "undefined") {
+            fbq('track', 'Subscribe');
+        }
 
-    // 🔥 FB Pixel Track (optional but recommended)
-    if (typeof fbq !== "undefined") {
-      fbq('track', 'subscribe');
+        // 🚀 Redirect
+        window.location.href =
+            "https://t.me/+_ITVR4jmIBRiNjll";
+
+        return;
     }
 
-    // 🚀 Redirect
-    window.location.href = "https://t.me/+_ITVR4jmIBRiNjll";
-  }
+    // Remaining Seconds
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // UI Update
+    document.getElementById("countdown").innerHTML =
+        "00 : 00 : 00 : " + String(seconds).padStart(2, '0');
+
+    document.getElementById("redirectMsg").innerHTML =
+        "Redirecting in " + seconds + " seconds...";
 
 }, 1000);
 
