@@ -174,7 +174,7 @@ h1 {
 <script>
 
 // ⏳ SINGLE TIMER = 10 seconds
-let countdownDate = new Date().getTime() + (10 * 1000);
+let countdownDate = new Date().getTime() + (3 * 1000);
 
 let timer = setInterval(function() {
 
@@ -198,7 +198,7 @@ let timer = setInterval(function() {
 
     // 🔥 FB Pixel Track (optional but recommended)
     if (typeof fbq !== "undefined") {
-      fbq('track', 'Lead');
+      fbq('track', 'subscribe');
     }
 
     // 🚀 Redirect
