@@ -150,66 +150,12 @@ h1{
     No spam. Just real updates & exclusive access.
   </div>
 
-  <!-- Countdown -->
-  <div class="timer" id="countdown">
-    00 : 00 : 00 : 02
-  </div>
-
-  <div class="timer-label">
-    DAYS &nbsp;&nbsp; HOURS &nbsp;&nbsp; MINUTES &nbsp;&nbsp; SECONDS
-  </div>
-
   <!-- Redirect Message -->
   <div class="redirect-text" id="redirectMsg">
-    Redirecting in 2 seconds...
+    Free Access expiring soon...
   </div>
 
 </div>
-
-<!-- JS -->
-<script>
-
-let seconds = 25;
-
-const countdownEl = document.getElementById("countdown");
-const redirectEl = document.getElementById("redirectMsg");
-
-let timer = setInterval(() => {
-
-    seconds--;
-
-    // Update Countdown
-    countdownEl.innerHTML =
-      "00 : 00 : 00 : " +
-      String(seconds).padStart(2, '0');
-
-    // Update Text
-    redirectEl.innerHTML =
-      "Redirecting in " + seconds + " seconds...";
-
-    // Redirect
-    if(seconds <= 0){
-
-        clearInterval(timer);
-
-        countdownEl.innerHTML = "00 : 00 : 00 : 00";
-        redirectEl.innerHTML = "Redirecting...";
-
-        // FB Pixel Event
-        if(typeof fbq !== "undefined"){
-            fbq('track', 'Subscribe');
-        }
-
-        // Redirect Delay
-        setTimeout(() => {
-            window.location.href =
-              "https://t.me/+_ITVR4jmIBRiNjll";
-        }, 300);
-    }
-
-}, 1000);
-
-</script>
 
 </body>
 </html>
